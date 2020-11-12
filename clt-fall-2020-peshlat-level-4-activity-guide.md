@@ -3,6 +3,8 @@ Computational Approaches to Studies in Human Language & Technology Using Python 
 
 Facilitators: Richard Medina and Aitor Alvarez
 
+A downloadable PDF version of this document: [clt-fall-2020-peshlat-level-4-activity-guide.pdf](https://github.com/richmedina/richmedina.github.io/blob/master/clt-fall-2020-peshlat-level-4-activity-guide.pdf)
+
 In this hands-on workshop participants will learn to apply techniques and best practices for utilizing the Natural Language Toolkit (NLTK) Python package to support studies in Human Language & Technology. The workshop will begin with an introduction to common patterns and idioms for working with data structures in Python. The second portion of the workshop will introduce NLTK through examples. The remainder of the session will focus on 1 or 2 illustrative use cases for data driven language scholarship utilizing existing corpora and the NLTK. The goal of the workshop is to provide participants experience and guidance with integrating computational approaches in their work. Prior exposure to Python will be useful but not necessary.
 
 
