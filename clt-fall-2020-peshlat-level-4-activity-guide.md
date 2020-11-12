@@ -82,36 +82,38 @@ Variables
 (b) Python distinguishes between numbers (integers, floats), characters, and strings (collections of characters)
 
 Example: Assign the value 11 to a variable x, then store the value of x doubled.
-
+```python
 	x = 11
 	y = x * 2
-
+```
 
 x and y are both storing an integer type
 
 
 Variables: character and strings
 ----
+```python
 	x = 'a'
 	x = 'discovery'
-
+```
 
 when executed, the second line overwrites the value in x - 'a' is replaced with 'discovery'
 
 
 Variables: floats (decimal numbers)
 ----
+```python
 	x = .7
 	y = 5/10 (stored as .5)
-
+```
 
 Expressions with operators
 ----
 	= is assignment not equality
-	
+```python	
 	a = (1 + 3 + 5) / 7
 	print(a)
-
+```
 
 common operators: \*, /, +, -, /
 
@@ -119,26 +121,27 @@ common operators: \*, /, +, -, /
 Getting input from the keyboard (standard input)
 ----
 using input() function in Python, you can enter data from the keyboard into your script
-
+```python
 	user_info = input('Enter your age then press <enter>:')
 	print(user_info)
+```
 
 all data input from the keyboard is treated like a string. You can convert that string into an integer using a _cast_.
-
+```python
 	case = input('Enter number of cases:')
 	case = int(case)
 	case = pow(case, 2)
 	print('Number of expected cases:', case)
-
+```
 
 Summation
 ----
 summation refers to the idea of aggregation in which we continually add to a variable while also updating its value.
-
+```python
 	a = 0
 	a = a + 5
 	a = a + 10
-
+```
 
 What is the value of a after all statements have executed?
 
@@ -183,7 +186,8 @@ https://docs.python.org/3/library/stdtypes.html#textseq
 
 Example functions:
 
-	# sort the items in the word list generated from the statement above
+	# sort the items in the word list generated from the statement above.
+	# method _CHANGES_ the list
 
 	words.sort()
 
@@ -196,13 +200,13 @@ See: https://docs.python.org/3/howto/sorting.html for more information on sortin
 
 Lists
 ----
-Lists are containers (or types) that allow collection of variables using a single reference. Please note the syntax in the following.
+Lists are containers (or types) that allow the collection of variables using a single reference. Please note the syntax in the following.
 
-	# A list of books titles there are currently two in the collection
+	# A list of book titles, There are currently two in the collection
 	titles = ['Graph Theory', 'Network Science']
 
 
-	# Add a new title:
+	# Add a new title to the list:
 	titles.append('Trump Pandemics')
 
 
@@ -239,9 +243,9 @@ If we wanted to process each item a particular way we could:
  		print('List item =>', title)
 ```
 
-Exercise Set 3: Summation Pattern With a List
+Exercise Set 2: Summation Pattern With a List
 ----
-Let's review the summation pattern again. In this case we will start with a list:
+Let's review the summation pattern again. In this case we will start with a list of integers:
 
 ```python
 	cases = [5, 2, 2, 6, 11]
