@@ -37,11 +37,11 @@ The expression of an algorithm (a set of steps that solve a problem) in an execu
 
 Some of our problems are mundane such as: 
 
-_'open a file and read the first word of each sentence.'_
+	'open a file and read the first word of each sentence.'
 
 Other problems are more complex such as:
 
-_'load the text of 1000 journal articles to determine the dominant topics that exist within the corpus.'_
+	'load the text of 1000 journal articles to determine the dominant topics that exist within the corpus.'
 
 Some computational problems are mathematical, some involve (semantic) inference and network centrality, some rely on statistical learning models and others on trained neural networks. There does not appear to be a shortage of problems.
 
