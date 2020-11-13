@@ -277,7 +277,7 @@ print(sum)
 
 Setting Up Your Development Environment
 ----
-A developement (or working) environment should organized so that you do not lose track of scripts and related data.
+A developement (or working) environment should be organized so that you do not lose track of scripts and related data.
 
 Tips:
 
