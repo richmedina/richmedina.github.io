@@ -14,7 +14,7 @@ Structure of a Computer Program/Script
 
 (2) program is interpreted by a compiler
 
-(3) Compiler translates instructions written in a programming language (E.g. Python) to instructions that are executable by the machine
+(3) compiler translates instructions written in a programming language (E.g. Python) to instructions that are executable by the machine
 
 Representations, Expressions and Translations
 ----
@@ -37,11 +37,11 @@ The expression of an algorithm (a set of steps that solve a problem) in an execu
 
 Some of our problems are mundane such as: 
 
-	'open a file and read the first word of each sentence.'
+    'open a file and read the first word of each sentence.'
 
 Other problems are more complex such as:
 
-	'load the text of 1000 journal articles to determine the dominant topics that exist within the corpus.'
+    'load the text of 1000 journal articles to determine the dominant topics that exist within the corpus.'
 
 Some computational problems are mathematical, some involve (semantic) inference and network centrality, some rely on statistical learning models and others on trained neural networks. There does not appear to be a shortage of problems.
 
@@ -53,12 +53,14 @@ Computer Programs/Scripts
 
 (c) a framework is collection many files that are used to construct other programs
 
-for this workshop, we are interested in the __scripting__ level of computation
+For this workshop, we are interested in the __scripting__ level of computation
 
 The Components of Script Writing
 ----
 (a) a text editor for entering our instructions in a given programming language (E.g., Python)
+
 (b) a compiler (also called an interpreter in the scripting context) that translates the script in the file and executes each instruction on the machine
+
 (c) an input and output component for reading in data to a script and displaying information from the script
 
 Components of a Python Script
@@ -74,17 +76,18 @@ Components of a Python Script
 x = 89
 y = 42
 ```
-these instructions are executed in the order that they appear in the script (x then y)
+These instructions are executed in the order that they appear in the script (x then y)
 
 Variables
 ----
 (a) like in algebra, variables provide a way to "name" and identify values that are needed in the script
+
 (b) Python distinguishes between numbers (integers, floats), characters, and strings (collections of characters)
 
 Example: Assign the value 11 to a variable x, then store the value of x doubled.
 ```python
-	x = 11
-	y = x * 2
+x = 11
+y = x * 2
 ```
 
 x and y are both storing an integer type
@@ -93,26 +96,27 @@ x and y are both storing an integer type
 Variables: character and strings
 ----
 ```python
-	x = 'a'
-	x = 'discovery'
+x = 'a'
+x = 'discovery'
 ```
 
-when executed, the second line overwrites the value in x - 'a' is replaced with 'discovery'
+when executed, the second line overwrites the value in x. 'a', is replaced with 'discovery'
 
 
 Variables: floats (decimal numbers)
 ----
 ```python
-	x = .7
-	y = 5/10 (stored as .5)
+x = .7
+y = 5/10 (stored as .5)
 ```
 
 Expressions with operators
 ----
-	= is assignment not equality
-```python	
-	a = (1 + 3 + 5) / 7
-	print(a)
+    
+```python
+#= is assignment not equality
+a = (1 + 3 + 5) / 7
+print(a)
 ```
 
 common operators: \*, /, +, -, /
@@ -122,25 +126,25 @@ Getting input from the keyboard (standard input)
 ----
 using input() function in Python, you can enter data from the keyboard into your script
 ```python
-	user_info = input('Enter your age then press <enter>:')
-	print(user_info)
+user_info = input('Enter your age then press <enter>:')
+print(user_info)
 ```
 
 all data input from the keyboard is treated like a string. You can convert that string into an integer using a _cast_.
 ```python
-	case = input('Enter number of cases:')
-	case = int(case)
-	case = pow(case, 2)
-	print('Number of expected cases:', case)
+case = input('Enter number of cases:')
+case = int(case)
+case = pow(case, 2)
+print('Number of expected cases:', case)
 ```
 
 Summation
 ----
 summation refers to the idea of aggregation in which we continually add to a variable while also updating its value.
 ```python
-	a = 0
-	a = a + 5
-	a = a + 10
+a = 0
+a = a + 5
+a = a + 10
 ```
 
 What is the value of a after all statements have executed?
@@ -157,90 +161,92 @@ Write a set of statements that prompts for two successive numbers (a and b) then
 Strings
 ----
 a string is a sequence of individual characters. Python treats a string as if it were a "list" of characters in a specific order.
-
-	s = 'Centrality is a very important concept'
-
+```python
+s = 'Centrality is a very important concept'
+```
 Using the type function to determine the type of a variable.
-
-	print(type(s))
-
+```python
+print(type(s))
+```
 Using various string functions:
-
-	len(s)
-	s.split() # splits a string into characters
-
+```python
+len(s)
+s.split() # splits a string into characters
+```
 
 Using Functions 
 ----
 input() is an example of a built-in function
 
 methods are functions that are only callable on related types. For example the string method split() is only useful on string types. Example,
-
-	s = 'Now is the time.'
-	words = s.split()
-
+```python
+s = 'Now is the time.'
+words = s.split()
+```
 Here's a list of String methods in Python
 
 https://docs.python.org/3/library/stdtypes.html#textseq
 
 
 Example functions:
+```python
+# sort the items in the word list generated from the statement above.
+# method _CHANGES_ the list
 
-	# sort the items in the word list generated from the statement above.
-	# method _CHANGES_ the list
-
-	words.sort()
+words.sort()
+```
 
 What is the problem with the sort method above? Here's another method for sorting that helps us address our problem.
-
-	sorted_words = sorted(words, key=lower)
-
+```python
+sorted_words = sorted(words, key=lower)
+```
 See: https://docs.python.org/3/howto/sorting.html for more information on sorting lists in Python.
 
 
 Lists
 ----
 Lists are containers (or types) that allow the collection of variables using a single reference. Please note the syntax in the following.
-
-	# A list of book titles, There are currently two in the collection
-	titles = ['Graph Theory', 'Network Science']
-
-
-	# Add a new title to the list:
-	titles.append('Trump Pandemics')
+```python
+# A list of book titles, There are currently two in the collection
+titles = ['Graph Theory', 'Network Science']
 
 
-	# Look at the first one:
-	print(titles[0])
+# Add a new title to the list:
+titles.append('Trump Pandemics')
 
 
-	# Look at the second one:
-	print(titles[1])
+# Look at the first one:
+print(titles[0])
+
+
+# Look at the second one:
+print(titles[1])
+```
 
 
 Strings are lists too! Here, you can access the first letter in a string.
-
-	s = 'algorithmic complexity'
-	print(s[0]) # prints the letter a
-
+```python
+s = 'algorithmic complexity'
+print(s[0]) # prints the letter a
+```
 
 Lists and Iteration
 ----
 Iterative structures go hand in hand with lists because they give us a way to handle items in a list of variable lengths. A loop for iterating over each title in the titles list will look like this:
 
 ```python
-	titles = ['Graph Theory', 'Network Science']
-	for title in titles:
- 		print('List item =>', title)
+titles = ['Graph Theory', 'Network Science']
+for title in titles:
+    print('List item =>', title)
  ```
 
 
 If we wanted to process each item a particular way we could:
 
 ```python
-	for title in titles:
- 		title = title.lower()
- 		print('List item =>', title)
+    for title in titles:
+        title = title.lower()
+        print('List item =>', title)
 ```
 
 Exercise Set 2: Summation Pattern With a List
@@ -248,19 +254,19 @@ Exercise Set 2: Summation Pattern With a List
 Let's review the summation pattern again. In this case we will start with a list of integers:
 
 ```python
-	cases = [5, 2, 2, 6, 11]
+cases = [5, 2, 2, 6, 11]
 ```
 
 Create a variable to store our sum.
 ```python
-	sum = 0
+sum = 0
 ```
 
 Next, we will iterate over the list, adding each value to our sum.
 
 ```python
 for value in cases:
-	sum = sum + value
+    sum = sum + value
 ```
 
 Now print the sum to the display.
@@ -268,6 +274,41 @@ Now print the sum to the display.
 ```python
 print(sum)
 ```
+
+Setting Up Your Development Environment
+----
+A developement (or working) environment should organized so that you do not lose track of scripts and related data.
+
+Tips:
+
+- Create a directory for each project (named in a way that easily identifies it!). This is your _working directory_
+- Within the working directory maintain your Python files ```*.py``` and your data files
+- Insist on using Virtual Environments to prevent Python packages from one project interfering with packages for another project
+- Optional - use versioning repositories to keep track of your changes over time.
+
+Virtual Environments in Python 3
+----
+A virtual environment creates a "sandbox" for your projects by isolating the necessary packages (E.g., NLTK) from interfering with other parts of your system. It's also a life saver for doing updates to the packages, etc.
+
+1. Creating a virtual environment for a project:
+
+Within your working directory for the project type (use Python 3 for this):
+
+```$ python -m venv projenv```
+
+This creates a new directory called projenv You can name that directory whatever you want. You only need to do this once for the working directory.
+
+2. Activate the virtual environment by typing: (on Windows, you may need to use backslashes instead of forward slashes)
+
+```$ source projenv/bin/activate``` 
+
+Now you can install packages and work on your project knowing that all the necessary dependencies are isolated to the virtual environment and cannot interfere with your other projects or your system.
+
+3. Deactivate the virtual environment by typing
+
+```$ deactivate```
+
+
 
 NLTK ==> Natural Language Toolkit
 ----
@@ -277,11 +318,28 @@ NLTK ==> Natural Language Toolkit
 
 (c) Reference: https://www.nltk.org/book/ch01.html
 
+
 Setting up NLTK for First Explorations
 ----
-(a) Install the nltk package
-(b) Install the nltk sample corpora for the book
+It is highly recommended that you have installed and activated a virtual environment before proceeding:
+
+(a) Install the nltk package https://www.nltk.org/install.html
+
+```$ pip install nltk```
+
+(b) Install the nltk sample corpora for the book http://www.nltk.org/data.html#interactive-installer
+
+```$ python```  (this enters the Python interpreter)
+```>>> import nltk```
+```>>> nltk.download()```
+
 (c) Access one of the sample copora using 'text1', or 'text2', etc.
+
+Show all the texts of a corpus named book:
+
+```import nltk.book```
+
+```nltk.book.texts()```
 
 Example NLTK Library Functions
 ----
@@ -293,24 +351,25 @@ Example NLTK Library Functions
 
 Frequencies
 ----
-- length
-- set 
-- 'lexical richness'
-- word frequency using ```count()/len()```
+- ```length``` number of words, symbols, punctuation
+- ```set``` to determine magnitude of vocabulary
+- 'lexical richness? vocab / total number of words
+- word frequency using ```count('word')/len(text)```
 
 Exercise Set 3
 ----
-- determine the following metrics from text4 (inaugural address corpus): 
+==> Determine the following metrics from text4 (inaugural address corpus): 
 
-lexical diversity and the frequency of the word 'freedom'
+Lexical diversity and the frequency of the word 'freedom'
 
 
 Frequency Distribution Library
 ----
-- E.g., ```fd = FreqDist(text4)```
-- ```fd.most_common(n)``` n highest frequency samples from text
-- ```fd['whale']``` reports the number of occurrences of the word whale in the samples
+- E.g., 
+```fd = FreqDist(text4)```
+```fd.most_common(n)``` n highest frequency samples from text
+```fd['whale']``` reports the number of occurrences of the word whale in the samples
 
 Exercise Set 4
 ----
-use the frequency distribution functions to determine the frequency (number of samples) of the word 'citizen' from text4
+==> Use the frequency distribution functions to determine the frequency (number of samples) of the word 'citizen' from text4
