@@ -198,7 +198,7 @@ words.sort()
 
 What is the problem with the sort method above? Here's another method for sorting that helps us address our problem.
 ```python
-sorted_words = sorted(words, key=lower)
+sorted_words = sorted(words, key=str.lower)  # corrected on Nov 12 added the class str to lower
 ```
 See: https://docs.python.org/3/howto/sorting.html for more information on sorting lists in Python.
 
